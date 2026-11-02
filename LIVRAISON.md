@@ -58,10 +58,11 @@ en dur (Max Bacon) — ce déploiement utilise plutôt le pattern par variable d
 Palette : réglable dans `app/globals.css` (bloc `@theme`, variables `--color-brand-*`
 et `--color-gold`, qui pointe vers le noir). Par défaut : **thème clair** — fond gris
 (dégradé clair), texte noir, accent noir/gris #333333. Les deux logos fournis par le
-client (`babby-rodriguez-logo.png`, `remax-platine-logo.png`) sont des PNG blancs sur
-fond transparent — `components/TopLogos.tsx` les pose donc sur une plaque noire
-(`bg-black/90`) pour qu'ils restent visibles sur le fond clair. Si de nouveaux logos
-en version sombre sont fournis un jour, cette plaque peut être retirée.
+client étaient à l'origine blancs sur fond transparent (pensés pour un thème sombre) ;
+ils ont été recolorés en noir pour le thème clair — `babby-rodriguez-logo.png`
+entièrement en noir, `remax-platine-logo.png` avec le texte « REMAX Platine » en noir
+et le ballon conservé dans ses couleurs officielles (rouge/marine/bleu/bordeaux). Posés
+directement sur le fond clair dans `components/TopLogos.tsx`, sans plaque.
 
 ## Développement
 
