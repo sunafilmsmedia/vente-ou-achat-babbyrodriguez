@@ -2,8 +2,8 @@
 
 App one-page de qualification de leads pour Babby Rodriguez, courtier immobilier
 RE/MAX Platine (Rive-Sud de Montréal). **Hybride** : branding et territoire repris
-de `eval-babbyrodriguez` (logos réels du client, thème noir / gris #333333 / blanc,
-carte Leaflet décorative, secteurs Rive-Sud), logistique et concept repris de
+de `eval-babbyrodriguez` (logos réels du client, carte Leaflet décorative,
+secteurs Rive-Sud), logistique et concept repris de
 `vente-ou-achat-maxbacon` (logiciel « vendre avant d'acheter ou l'inverse »).
 Next.js 15 (App Router, TS) · Tailwind v4 · Framer Motion · Leaflet · déploiement
 Vercel. **Tout le contenu visiteur est en espagnol** (vouvoiement formel via « usted »).
@@ -56,7 +56,12 @@ en dur (Max Bacon) — ce déploiement utilise plutôt le pattern par variable d
 (`NEXT_PUBLIC_META_PIXEL_ID`, vide par défaut), comme `eval-babbyrodriguez`.
 
 Palette : réglable dans `app/globals.css` (bloc `@theme`, variables `--color-brand-*`
-et `--color-gold`, qui pointe vers le blanc). Par défaut : noir / gris #333333 / blanc.
+et `--color-gold`, qui pointe vers le noir). Par défaut : **thème clair** — fond gris
+(dégradé clair), texte noir, accent noir/gris #333333. Les deux logos fournis par le
+client (`babby-rodriguez-logo.png`, `remax-platine-logo.png`) sont des PNG blancs sur
+fond transparent — `components/TopLogos.tsx` les pose donc sur une plaque noire
+(`bg-black/90`) pour qu'ils restent visibles sur le fond clair. Si de nouveaux logos
+en version sombre sont fournis un jour, cette plaque peut être retirée.
 
 ## Développement
 

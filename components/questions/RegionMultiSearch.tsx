@@ -68,7 +68,7 @@ export default function RegionMultiSearch({ value, onChange, max = 1, placeholde
                 rounded-full pl-4 pr-3 py-2 text-sm font-semibold
                 bg-gradient-to-br from-[var(--color-gold-soft)] to-[var(--color-gold)]
                 text-white
-                shadow-[0_10px_26px_-12px_rgba(220,25,40,0.55)]
+                shadow-[0_10px_26px_-12px_rgba(0,0,0,0.55)]
               "
             >
               {displayName(id)}
@@ -86,7 +86,7 @@ export default function RegionMultiSearch({ value, onChange, max = 1, placeholde
       {/* Champ de recherche / saisie libre */}
       <div className="relative">
         <svg
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none"
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--color-slate-400)] pointer-events-none"
           viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.8"
         >
           <circle cx="9" cy="9" r="6" />
@@ -106,7 +106,7 @@ export default function RegionMultiSearch({ value, onChange, max = 1, placeholde
           }
           className="
             w-full glass-card rounded-xl pl-11 pr-4 py-3.5
-            text-[var(--color-brand-100)] placeholder:text-slate-400/70
+            text-[var(--color-brand-100)] placeholder:text-[var(--color-slate-400)]/70
             text-base disabled:opacity-60
             focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-400)]/35
           "
@@ -114,7 +114,7 @@ export default function RegionMultiSearch({ value, onChange, max = 1, placeholde
       </div>
 
       {max > 1 && (
-        <p className="text-[11px] text-slate-500">
+        <p className="text-[11px] text-[var(--color-slate-500)]">
           {selected.length} / {max} sector{selected.length > 1 ? "es" : ""} elegido
           {selected.length > 1 ? "s" : ""}
         </p>
@@ -133,12 +133,12 @@ export default function RegionMultiSearch({ value, onChange, max = 1, placeholde
                 className="
                   w-full text-left glass-card rounded-xl px-4 py-3
                   flex items-center justify-between gap-3
-                  hover:bg-white/[0.05] hover:border-[var(--color-slate-accent)]/30
+                  hover:bg-black/[0.04] hover:border-[var(--color-slate-accent)]/30
                   transition-colors group
                 "
               >
                 <span className="font-medium text-[var(--color-brand-100)]">{r.name}</span>
-                <svg className="w-4 h-4 text-slate-400 group-hover:text-[var(--color-brand-300)] transition-colors shrink-0" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg className="w-4 h-4 text-[var(--color-slate-400)] group-hover:text-[var(--color-brand-300)] transition-colors shrink-0" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M10 4v12M4 10h12" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </button>
@@ -165,7 +165,7 @@ export default function RegionMultiSearch({ value, onChange, max = 1, placeholde
                 <span className="block font-medium text-[var(--color-brand-100)] truncate">
                   Agregar «&nbsp;{q}&nbsp;»
                 </span>
-                <span className="block text-[11px] text-slate-500">Su sector</span>
+                <span className="block text-[11px] text-[var(--color-slate-500)]">Su sector</span>
               </span>
             </button>
           )}

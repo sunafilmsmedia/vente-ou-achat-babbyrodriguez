@@ -28,8 +28,8 @@ export default function ChoiceQuestion({ choices, value, onChange }: Props) {
               transition-all duration-200
               ${
                 selected
-                  ? "bg-gradient-to-br from-[var(--color-gold-soft)] to-[var(--color-gold)] border border-[var(--color-gold-soft)] shadow-[0_12px_30px_-10px_rgba(220,25,40,0.5)]"
-                  : "glass-card hover:border-[var(--color-slate-accent)]/40 hover:bg-white/[0.04]"
+                  ? "bg-gradient-to-br from-[var(--color-gold-soft)] to-[var(--color-gold)] border border-[var(--color-gold-soft)] shadow-[0_12px_30px_-10px_rgba(0,0,0,0.5)]"
+                  : "glass-card hover:border-[var(--color-slate-accent)]/40 hover:bg-black/[0.03]"
               }
             `}
           >
@@ -39,7 +39,7 @@ export default function ChoiceQuestion({ choices, value, onChange }: Props) {
                   {c.label}
                 </p>
                 {c.hint && (
-                  <p className={`text-xs mt-0.5 ${selected ? "text-white/75" : "text-slate-400"}`}>{c.hint}</p>
+                  <p className={`text-xs mt-0.5 ${selected ? "text-white/75" : "text-[var(--color-slate-400)]"}`}>{c.hint}</p>
                 )}
               </div>
               <span

@@ -4,9 +4,10 @@
 //  (+ lib/regions.ts pour la liste des secteurs, + les images dans /public,
 //   + les variables d'environnement : voir .env.local.example)
 //
-//  Palette : noir / gris #333333 / blanc. Les couleurs se règlent dans
-//  app/globals.css (bloc @theme) — cherche les variables --color-brand-*
-//  et --color-gold (nom hérité du template, mappé au blanc ici).
+//  Palette : fond gris clair / texte noir (thème clair monochrome). Les
+//  couleurs se règlent dans app/globals.css (bloc @theme) — cherche les
+//  variables --color-brand-* et --color-gold (nom hérité du template,
+//  mappé au noir ici).
 //
 //  Branding : Babby Rodriguez, courtier immobilier RE/MAX Platine (Rive-Sud
 //  de Montréal). Contenu visiteur ENTIÈREMENT en espagnol (vouvoiement

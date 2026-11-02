@@ -99,7 +99,7 @@ export default function Hero({ onStart }: HeroProps) {
         </h1>
 
         {/* Sous-titre */}
-        <p className="mt-6 text-base sm:text-lg text-slate-300 font-medium max-w-xl mx-auto leading-relaxed text-balance">
+        <p className="mt-6 text-base sm:text-lg text-[var(--color-slate-300)] font-medium max-w-xl mx-auto leading-relaxed text-balance">
           {h.subtitle}
         </p>
 
@@ -131,8 +131,8 @@ export default function Hero({ onStart }: HeroProps) {
               rounded-full
               bg-gradient-to-b from-[var(--color-gold-soft)] to-[var(--color-gold)]
               text-white font-semibold text-base
-              shadow-[0_20px_50px_-15px_rgba(220,25,40,0.55),0_0_0_1px_rgba(0,0,0,0.15)_inset]
-              hover:shadow-[0_25px_60px_-10px_rgba(220,25,40,0.7),0_0_0_1px_rgba(0,0,0,0.2)_inset]
+              shadow-[0_20px_50px_-15px_rgba(0,0,0,0.55),0_0_0_1px_rgba(0,0,0,0.15)_inset]
+              hover:shadow-[0_25px_60px_-10px_rgba(0,0,0,0.7),0_0_0_1px_rgba(0,0,0,0.2)_inset]
               transition-all duration-300
               hover:-translate-y-0.5
               active:translate-y-0
@@ -143,7 +143,7 @@ export default function Hero({ onStart }: HeroProps) {
               <path d="M5 10h10M11 6l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
-          <p className="text-xs text-slate-500">{h.ctaHint}</p>
+          <p className="text-xs text-[var(--color-slate-500)]">{h.ctaHint}</p>
         </motion.div>
       </motion.div>
 
@@ -152,7 +152,7 @@ export default function Hero({ onStart }: HeroProps) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.5 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-24 sm:bottom-10 left-1/2 -translate-x-1/2 text-[10px] text-slate-500 uppercase tracking-[0.2em]"
+        className="absolute bottom-24 sm:bottom-10 left-1/2 -translate-x-1/2 text-[10px] text-[var(--color-slate-500)] uppercase tracking-[0.2em]"
       >
         {h.scrollHint}
       </motion.div>

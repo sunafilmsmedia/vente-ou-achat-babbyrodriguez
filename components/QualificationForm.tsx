@@ -121,7 +121,7 @@ export default function QualificationForm({ onComplete, onExit }: Props) {
       <header className="flex items-center justify-between gap-4 mb-8 sm:mb-12">
         <button
           onClick={onExit}
-          className="text-xs text-slate-500 hover:text-[var(--color-brand-200)] transition-colors flex items-center gap-1.5"
+          className="text-xs text-[var(--color-slate-500)] hover:text-[var(--color-brand-200)] transition-colors flex items-center gap-1.5"
         >
           <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M5 2L2 6L5 10M2 6H10" strokeLinecap="round" strokeLinejoin="round" />
@@ -151,7 +151,7 @@ export default function QualificationForm({ onComplete, onExit }: Props) {
                 {current.title}
               </h2>
               {current.subtitle && (
-                <p className="mt-2.5 text-sm sm:text-base text-slate-400">{current.subtitle}</p>
+                <p className="mt-2.5 text-sm sm:text-base text-[var(--color-slate-400)]">{current.subtitle}</p>
               )}
             </div>
 
@@ -169,7 +169,7 @@ export default function QualificationForm({ onComplete, onExit }: Props) {
             disabled={index === 0}
             className="
               px-5 py-2.5 rounded-full text-sm font-medium
-              text-slate-400 hover:text-[var(--color-brand-200)]
+              text-[var(--color-slate-400)] hover:text-[var(--color-brand-200)]
               disabled:opacity-30 disabled:cursor-not-allowed
               transition-colors
             "
@@ -187,8 +187,8 @@ export default function QualificationForm({ onComplete, onExit }: Props) {
                 px-6 sm:px-8 py-3 rounded-full text-sm font-medium
                 bg-gradient-to-b from-[var(--color-gold-soft)] to-[var(--color-gold)]
                 text-white font-semibold
-                shadow-[0_15px_40px_-10px_rgba(220,25,40,0.55)]
-                hover:shadow-[0_20px_50px_-10px_rgba(220,25,40,0.7)]
+                shadow-[0_15px_40px_-10px_rgba(0,0,0,0.55)]
+                hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.7)]
                 disabled:opacity-50 disabled:cursor-not-allowed
                 transition-all
               "
@@ -206,9 +206,9 @@ export default function QualificationForm({ onComplete, onExit }: Props) {
               className="
                 inline-flex items-center gap-2
                 px-6 py-2.5 rounded-full text-sm font-medium
-                bg-white/[0.06] border border-[var(--color-slate-accent)]/25
+                bg-black/[0.04] border border-[var(--color-slate-accent)]/25
                 text-[var(--color-brand-100)]
-                hover:bg-white/[0.1] hover:border-[var(--color-slate-accent)]/40
+                hover:bg-black/[0.07] hover:border-[var(--color-slate-accent)]/40
                 disabled:opacity-40 disabled:cursor-not-allowed
                 transition-all
               "

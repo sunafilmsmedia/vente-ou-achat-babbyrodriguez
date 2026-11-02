@@ -24,9 +24,9 @@ const VERDICT_BADGE: Record<Verdict, { label: string; color: string; bg: string;
   },
   acheter_avant: {
     label: "Comprar antes de vender",
-    color: "text-white",
-    bg: "bg-white/10",
-    ring: "ring-white/30",
+    color: "text-black",
+    bg: "bg-black/10",
+    ring: "ring-black/30",
   },
   simultane: {
     label: "Estrategia combinada",
@@ -62,7 +62,7 @@ export default function ResultsScreen({ analyze, answers, leadResult, onRestart 
         transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
         className="text-center mb-10"
       >
-        <p className="text-[11px] uppercase tracking-[0.2em] text-slate-500 mb-3">Su estrategia inmobiliaria</p>
+        <p className="text-[11px] uppercase tracking-[0.2em] text-[var(--color-slate-500)] mb-3">Su estrategia inmobiliaria</p>
         <h1 className="display-title text-[1.8rem] sm:text-5xl lg:text-6xl text-[var(--color-brand-100)] text-balance">
           {report.headline}
         </h1>
@@ -152,7 +152,7 @@ export default function ResultsScreen({ analyze, answers, leadResult, onRestart 
         transition={{ duration: 0.5, delay: 0.65 }}
         className="mt-10"
       >
-        <h3 className="text-xs uppercase tracking-[0.18em] text-slate-500 mb-4">
+        <h3 className="text-xs uppercase tracking-[0.18em] text-[var(--color-slate-500)] mb-4">
           Factores detectados
         </h3>
         <ul className="space-y-2">
@@ -169,7 +169,7 @@ export default function ResultsScreen({ analyze, answers, leadResult, onRestart 
         transition={{ duration: 0.5, delay: 0.75 }}
         className="mt-12"
       >
-        <h3 className="text-xs uppercase tracking-[0.18em] text-slate-500 mb-5">
+        <h3 className="text-xs uppercase tracking-[0.18em] text-[var(--color-slate-500)] mb-5">
           Próximos pasos
         </h3>
         <ol className="space-y-3">
@@ -180,13 +180,13 @@ export default function ResultsScreen({ analyze, answers, leadResult, onRestart 
                 bg-gradient-to-br from-[var(--color-gold-soft)] to-[var(--color-gold)]
                 flex items-center justify-center
                 font-serif text-white text-sm
-                shadow-[0_6px_18px_-4px_rgba(220,25,40,0.5)]
+                shadow-[0_6px_18px_-4px_rgba(0,0,0,0.5)]
               ">
                 {i + 1}
               </span>
               <div>
                 <p className="font-medium text-[var(--color-brand-100)]">{s.title}</p>
-                <p className="text-sm text-slate-400 mt-1 leading-relaxed">{s.description}</p>
+                <p className="text-sm text-[var(--color-slate-400)] mt-1 leading-relaxed">{s.description}</p>
               </div>
             </li>
           ))}
@@ -194,7 +194,7 @@ export default function ResultsScreen({ analyze, answers, leadResult, onRestart 
       </motion.section>
 
       {/* Avis */}
-      <p className="mt-10 text-[11px] text-slate-500 leading-relaxed">
+      <p className="mt-10 text-[11px] text-[var(--color-slate-500)] leading-relaxed">
         Esta recomendación se basa únicamente en sus respuestas — no reemplaza la opinión de
         un agente inmobiliario o de un prestamista hipotecario, quien validará su situación
         real antes de cualquier decisión.
@@ -204,11 +204,11 @@ export default function ResultsScreen({ analyze, answers, leadResult, onRestart 
       <div className="mt-10 mb-24 sm:mb-12 text-center">
         <button
           onClick={onRestart}
-          className="text-sm text-slate-400 hover:text-[var(--color-brand-200)] transition-colors underline underline-offset-4 decoration-white/25 hover:decoration-[var(--color-brand-400)]"
+          className="text-sm text-[var(--color-slate-400)] hover:text-[var(--color-brand-200)] transition-colors underline underline-offset-4 decoration-black/25 hover:decoration-[var(--color-brand-400)]"
         >
           Rehacer la prueba
         </button>
-        <p className="mt-6 text-[10px] text-slate-600 uppercase tracking-[0.2em]">
+        <p className="mt-6 text-[10px] text-[var(--color-slate-600)] uppercase tracking-[0.2em]">
           Estrategia {analyze.generatedBy === "claude" ? "IA" : "determinista"}
         </p>
       </div>
@@ -239,25 +239,25 @@ function StrategyGauge({ netScore, verdict }: { netScore: number; verdict: Verdi
       "
     >
       <div className="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-[var(--color-gold)]/20 blur-3xl" />
-      <div className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-white/10 blur-3xl" />
+      <div className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-black/5 blur-3xl" />
 
       <div className="relative">
         <p className="text-[11px] uppercase tracking-[0.2em] text-[var(--color-brand-300)] text-center">
           Dónde se ubica usted
         </p>
 
-        <div className="mt-6 relative h-2.5 w-full rounded-full overflow-hidden bg-gradient-to-r from-white/25 via-white/10 to-[var(--color-gold)]">
+        <div className="mt-6 relative h-2.5 w-full rounded-full overflow-hidden bg-gradient-to-r from-black/25 via-black/10 to-[var(--color-gold)]">
           <motion.div
             initial={{ left: "50%" }}
             animate={{ left: `${pct}%` }}
             transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-white ring-4 ring-[var(--color-gold)]/50 shadow-[0_6px_16px_-2px_rgba(0,0,0,0.5)]"
+            className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-black ring-4 ring-white/70 shadow-[0_6px_16px_-2px_rgba(0,0,0,0.5)]"
           />
         </div>
 
         <div className="mt-3 flex items-center justify-between text-[11px] sm:text-xs font-medium">
-          <span className="text-white/75">Comprar antes</span>
-          <span className="text-slate-400">Simultáneo</span>
+          <span className="text-black/75">Comprar antes</span>
+          <span className="text-[var(--color-slate-400)]">Simultáneo</span>
           <span className="text-[var(--color-brand-300)]">Vender antes</span>
         </div>
 
@@ -272,8 +272,8 @@ function FactorRow({ factor }: { factor: ScoringFactor }) {
     factor.tone === "vendre"
       ? "bg-[var(--color-gold)]"
       : factor.tone === "acheter"
-      ? "bg-white"
-      : "bg-slate-400";
+      ? "bg-black"
+      : "bg-[var(--color-slate-400)]";
   return (
     <li className="flex items-center gap-3 text-sm">
       <span className={`shrink-0 w-2 h-2 rounded-full ${dot}`} />

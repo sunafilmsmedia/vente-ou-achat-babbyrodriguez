@@ -14,7 +14,7 @@ export default function LoadingScreen() {
         <div className="relative mx-auto mb-10 w-20 h-20 flex items-center justify-center">
           <div className="absolute inset-0 rounded-full bg-[var(--color-gold)]/20 animate-ping" />
           <div className="absolute inset-2 rounded-full bg-[var(--color-gold)]/25" />
-          <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-[var(--color-gold-soft)] to-[var(--color-gold)] shadow-[0_8px_30px_-4px_rgba(220,25,40,0.5)]" />
+          <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-[var(--color-gold-soft)] to-[var(--color-gold)] shadow-[0_8px_30px_-4px_rgba(0,0,0,0.5)]" />
         </div>
 
         <p className="text-[11px] uppercase tracking-[0.25em] text-[var(--color-brand-300)] mb-5">
@@ -29,7 +29,7 @@ export default function LoadingScreen() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="mt-8 text-sm text-slate-400"
+          className="mt-8 text-sm text-[var(--color-slate-400)]"
         >
           Unos segundos — cruzamos su situación financiera, su propiedad actual y su próxima
           compra para darle una recomendación honesta.

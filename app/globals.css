@@ -11,38 +11,38 @@
   --color-ink-800: #141414;
   --color-ink-700: #1f1f1f;
 
-  /* Thème SOMBRE — fond noir / texte clair / accent gris-blanc (monochrome).
-     brand-100/200 = textes clairs lisibles sur noir ;
-     brand-300 = gris clair (micro-libellés, icônes) ;
-     brand-400..900 = surfaces sombres élevées (cartes, cercles). */
-  --color-brand-50: #f5f5f4;
-  --color-brand-100: #f5f5f4;
-  --color-brand-200: #d6d3d1;
-  --color-brand-300: #ffffff;
-  --color-brand-400: #333333;
-  --color-brand-500: #1f1f1f;
-  --color-brand-600: #171717;
-  --color-brand-700: #0f0f0f;
-  --color-brand-800: #141414;
-  --color-brand-900: #000000;
+  /* Thème CLAIR — fond gris / texte noir / accent noir-gris #333333 (monochrome inversé).
+     brand-100/200 = textes sombres lisibles sur gris clair ;
+     brand-300/400 = noir (micro-libellés, icônes, anneaux de focus) ;
+     brand-500..900 = surfaces claires élevées (cartes, cercles). */
+  --color-brand-50: #0a0a0a;
+  --color-brand-100: #0a0a0a;
+  --color-brand-200: #333333;
+  --color-brand-300: #000000;
+  --color-brand-400: #1a1a1a;
+  --color-brand-500: #f5f5f4;
+  --color-brand-600: #ededec;
+  --color-brand-700: #e0e0de;
+  --color-brand-800: #d6d6d4;
+  --color-brand-900: #ffffff;
 
-  /* Accent de marque — monochrome noir / gris #333333 / blanc (remplace l'ancien doré) */
-  --color-gold: #ffffff;
-  --color-gold-soft: #cfcfcf;
+  /* Accent de marque — monochrome noir / gris #333333 sur fond clair (remplace l'ancien blanc) */
+  --color-gold: #000000;
+  --color-gold-soft: #333333;
 
-  --color-slate-accent: #ffffff;
-  --color-slate-soft: #cfcfcf;
+  --color-slate-accent: #000000;
+  --color-slate-soft: #333333;
 
-  /* Textes secondaires — gris clairs lisibles sur fond noir */
-  --color-slate-300: #d4d4d4;
-  --color-slate-400: #a3a3a3;
-  --color-slate-500: #8a8a8a;
-  --color-slate-600: #6b6b6b;
+  /* Textes secondaires — gris foncés lisibles sur fond gris clair */
+  --color-slate-300: #262626;
+  --color-slate-400: #4a4a4a;
+  --color-slate-500: #6e6e6e;
+  --color-slate-600: #999999;
 }
 
 html, body {
-  background: radial-gradient(ellipse at 50% -5%, #1a1a1a 0%, #0c0c0c 42%, #000000 100%);
-  color: #f5f5f4;
+  background: radial-gradient(ellipse at 50% -5%, #f2f2f0 0%, #e4e4e2 45%, #d4d4d2 100%);
+  color: #0a0a0a;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -53,25 +53,25 @@ body {
   overflow-x: hidden;
 }
 
-/* Surface sombre givrée (thème noir) */
+/* Surface claire givrée (thème clair) */
 @utility glass-card {
-  background: rgba(255, 255, 255, 0.045);
+  background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(18px) saturate(120%);
   -webkit-backdrop-filter: blur(18px) saturate(120%);
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow:
-    0 24px 60px -28px rgba(0, 0, 0, 0.7),
-    0 1px 0 rgba(255, 255, 255, 0.04) inset;
+    0 24px 60px -28px rgba(0, 0, 0, 0.18),
+    0 1px 0 rgba(255, 255, 255, 0.6) inset;
 }
 
 @utility glass-card-light {
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(20px) saturate(140%);
   -webkit-backdrop-filter: blur(20px) saturate(140%);
-  border: 1px solid rgba(255, 255, 255, 0.20);
+  border: 1px solid rgba(0, 0, 0, 0.10);
   box-shadow:
-    0 30px 80px -30px rgba(0, 0, 0, 0.85),
-    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+    0 30px 80px -30px rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
 }
 
 @utility text-balance {
@@ -87,7 +87,7 @@ body {
   line-height: 1.02;
 }
 
-/* AI shimmer — dégradé multicolore lent, reste doux */
+/* AI shimmer — dégradé noir/gris lent, reste doux sur fond clair */
 @keyframes ai-shimmer {
   0% { background-position: 0% 50%; }
   100% { background-position: 200% 50%; }
@@ -95,12 +95,12 @@ body {
 .ai-shimmer {
   background-image: linear-gradient(
     90deg,
-    #f5f5f4 0%,
-    #ffffff 22%,
-    #cfcfcf 44%,
-    #f5f5f4 62%,
-    #ffffff 82%,
-    #f5f5f4 100%
+    #0a0a0a 0%,
+    #000000 22%,
+    #333333 44%,
+    #0a0a0a 62%,
+    #000000 82%,
+    #0a0a0a 100%
   );
   background-size: 200% auto;
   background-clip: text;
@@ -112,12 +112,12 @@ body {
 .ai-shimmer-fast {
   background-image: linear-gradient(
     90deg,
-    #f5f5f4 0%,
-    #ffffff 22%,
-    #cfcfcf 44%,
-    #f5f5f4 62%,
-    #ffffff 82%,
-    #f5f5f4 100%
+    #0a0a0a 0%,
+    #000000 22%,
+    #333333 44%,
+    #0a0a0a 62%,
+    #000000 82%,
+    #0a0a0a 100%
   );
   background-size: 200% auto;
   background-clip: text;
@@ -143,9 +143,9 @@ body {
   opacity: 0.5;
 }
 
-/* Carte fond non-interactive — sombre, rues à peine visibles sous le voile noir */
+/* Carte fond non-interactive — claire, rues à peine visibles sous le voile gris */
 .map-mono {
-  filter: grayscale(1) contrast(1.1) brightness(0.85) opacity(0.5);
+  filter: grayscale(1) contrast(1.05) brightness(1.1) opacity(0.65);
 }
 
 .map-no-interaction {
@@ -158,24 +158,24 @@ body {
   font-family: var(--font-sans);
 }
 .leaflet-control-attribution {
-  background: rgba(0, 0, 0, 0.55) !important;
-  color: rgba(255,255,255, 0.5) !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(0, 0, 0, 0.55) !important;
   font-size: 10px !important;
   padding: 2px 6px !important;
   border-radius: 4px;
 }
 .leaflet-control-attribution a {
-  color: rgba(255,255,255, 0.75) !important;
+  color: rgba(0, 0, 0, 0.8) !important;
 }
 
 /* Scrollbar discrète */
 ::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255, 0.18);
+  background: rgba(0, 0, 0, 0.18);
   border-radius: 9999px;
 }
-::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255, 0.3); }
+::-webkit-scrollbar-thumb:hover { background: rgba(0, 0, 0, 0.3); }
 
 /* Inputs sans bordures par défaut */
 input, textarea, select {

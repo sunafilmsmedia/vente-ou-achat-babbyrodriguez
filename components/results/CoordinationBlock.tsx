@@ -36,10 +36,10 @@ export default function CoordinationBlock() {
       transition={{ duration: 0.5, delay: 0.5 }}
       className="mt-12"
     >
-      <h3 className="text-xs uppercase tracking-[0.18em] text-slate-500 mb-2">
+      <h3 className="text-xs uppercase tracking-[0.18em] text-[var(--color-slate-500)] mb-2">
         Herramientas para coordinar su venta y su compra
       </h3>
-      <p className="text-sm text-slate-400 mb-5 leading-relaxed">
+      <p className="text-sm text-[var(--color-slate-400)] mb-5 leading-relaxed">
         Sin importar la estrategia recomendada, estas herramientas reducen el riesgo de
         quedarse sin vivienda — o de pagar dos hipotecas durante demasiado tiempo.
       </p>
@@ -54,12 +54,12 @@ export default function CoordinationBlock() {
             className="glass-card rounded-2xl p-5"
           >
             <p className="font-medium text-[var(--color-brand-100)]">{o.nom}</p>
-            <p className="text-xs text-slate-400 mt-2 leading-relaxed">{o.detail}</p>
+            <p className="text-xs text-[var(--color-slate-400)] mt-2 leading-relaxed">{o.detail}</p>
           </motion.div>
         ))}
       </div>
 
-      <p className="mt-4 text-[11px] text-slate-500 italic leading-relaxed">
+      <p className="mt-4 text-[11px] text-[var(--color-slate-500)] italic leading-relaxed">
         Disponibilidad y condiciones variables según el prestamista y el contexto de la
         transacción — a validar con un agente inmobiliario y un agente hipotecario.
       </p>

@@ -29,10 +29,10 @@ export default function TextQuestion({
         placeholder={placeholder}
         className="
           w-full font-serif text-2xl sm:text-3xl text-[var(--color-brand-100)] bg-transparent
-          placeholder:text-slate-400/50 focus:outline-none w-full
+          placeholder:text-[var(--color-slate-400)]/50 focus:outline-none w-full
         "
       />
-      {helper && <p className="text-xs text-slate-500 mt-3">{helper}</p>}
+      {helper && <p className="text-xs text-[var(--color-slate-500)] mt-3">{helper}</p>}
     </div>
   );
 }
